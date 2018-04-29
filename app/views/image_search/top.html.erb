@@ -4,7 +4,8 @@
   <%= form_tag({action: 'search', method: "post"}) do %>
     <%= text_field_tag 'text'%>
       <%= button_tag "検索" %>
-        <% end %>
+        <%= select :colum,:name, {"ファイル名" => "image_name", "セリフ" => "serif_name"} %>
+          <% end %>
 </div>
 
 <div>
