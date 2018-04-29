@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  root 'image_search#top'
+  post '/search', to: 'image_search#search'
+  get '/search', to: 'image_search#top'
   resources :image
 end

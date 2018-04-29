@@ -1,0 +1,14 @@
+<h1>Lobotomy Search Engin</h1>
+
+<div>
+  <%= form_tag({action: 'search', method: "post"}) do %>
+    <%= text_field_tag 'text'%>
+      <%= button_tag "検索" %>
+        <% end %>
+</div>
+
+<div>
+  <% @images.each do |image| %>
+    <%= image_tag(image.image_name,width: '30%') %>
+      <% end %>
+</div>
