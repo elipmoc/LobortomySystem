@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180429094648) do
+ActiveRecord::Schema.define(version: 20180429100120) do
 
   create_table "chara_mappings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "image_id"
-    t.integer "chara_id"
+    t.bigint "image_id"
+    t.bigint "chara_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["chara_id"], name: "fk_rails_0d453a3c73"
+    t.index ["image_id"], name: "fk_rails_35baec21f5"
   end
 
   create_table "charas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -33,4 +35,6 @@ ActiveRecord::Schema.define(version: 20180429094648) do
     t.string "serif_ruby_name"
   end
 
+  add_foreign_key "chara_mappings", "charas"
+  add_foreign_key "chara_mappings", "images"
 end
