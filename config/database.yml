@@ -24,5 +24,6 @@ test:
   database: lobotomy_test
 
 production:
-  <<: *default
   database: lobotomy_production
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
