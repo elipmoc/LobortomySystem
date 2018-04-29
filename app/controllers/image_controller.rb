@@ -13,8 +13,7 @@ class ImageController < ApplicationController
 
   def update
     @image = Image.find(params[:id])
-    @image.update(images_params)
-    @image.save
+    @image.update_attributes(images_params)
     render 'show'
   end
 
