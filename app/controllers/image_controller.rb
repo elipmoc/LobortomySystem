@@ -14,10 +14,11 @@ class ImageController < ApplicationController
   def update
     @image = Image.find(params[:id])
     @image.update(images_params)
+    @image.save
     render 'show'
   end
 
   def images_params
-    params.require(:image).permit(:serif_name)
+    params.require(:image).permit(:serif_name, :serif_ruby_name)
   end
 end
