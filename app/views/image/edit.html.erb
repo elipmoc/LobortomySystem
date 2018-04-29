@@ -1,0 +1,7 @@
+<%= image_tag(@image.image_name,width: '50%') %>
+  <%= form_for(@image) do |f| %>
+    セリフ：
+    <br>
+    <%= f.text_field :serif_name, size: '60%' %>
+      <%= button_tag '更新'%>
+        <% end %>

@@ -1,0 +1,6 @@
+<%= image_tag(@image.image_name,width: '50%') %>
+  <%= button_to "編集", {action: "edit", id: @image.id}, {method: :get} %>
+    ファイル名：
+    <%= @image.image_name %>
+      <br> セリフ：
+      <%= @image.serif_name %>
