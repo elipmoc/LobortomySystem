@@ -5,7 +5,8 @@
     <%= text_field_tag 'text'%>
       <%= button_tag "検索" %>
         <%= select :colum,:name, {"ファイル名" => "image_name", "セリフ" => "serif_name"} %>
-          <% end %>
+          <%= select :colum,:chara_id, [['指定なし',""]] +select_chara%>
+            <% end %>
 </div>
 
 <div>
