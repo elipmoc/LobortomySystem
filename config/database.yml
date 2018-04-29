@@ -24,8 +24,5 @@ test:
   database: lobotomy_test
 
 production:
-  adapter: postgresql
-  encoding: unicode
   database: lobotomy_production
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
