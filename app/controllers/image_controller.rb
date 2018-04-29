@@ -1,6 +1,6 @@
 class ImageController < ApplicationController
   def index
-    @images = Image.all
+    @images = Image.all.order("updated_at DESC")
   end
 
   def show
