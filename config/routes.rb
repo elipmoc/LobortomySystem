@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   post '/search', to: 'image_search#search'
   get '/search', to: 'image_search#top'
   resources :image
+  resources :chara_mapping
 end
