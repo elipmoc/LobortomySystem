@@ -17,4 +17,12 @@ class DbSeed
       chara_name: row[1],
     )
   end
+  
+  CSV.foreach('db/csv/chara_mappings.csv') do |row|
+    CharaMapping.create(
+      id: row[0],
+      image_id: row[1],
+      chara_id: row[2],
+    )
+  end
 end

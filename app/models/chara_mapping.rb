@@ -1,0 +1,2 @@
+class CharaMapping < ApplicationRecord
+end
